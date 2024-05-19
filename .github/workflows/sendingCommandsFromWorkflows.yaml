@@ -6,4 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setting an error message
-        run:  echo "::error::Missing Semi Colon" 
+        run:  echo "::error::Missing Semi Colon"
+  group-of-logs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running-group-of-logs
+        run: |
+          echo "::group::My Group Title"
+          echo Inside Group 
+          echo "::endgroup::"
+      - name: Masking value
+        run: echo "::add-mask::Secret String Here"
+      - name: Echo a Secret String
+        run: echo "Secret String Here"
