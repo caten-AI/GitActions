@@ -20,6 +20,6 @@ jobs:
                 steps:
                     - name: List Files Before
                       run: ls -a
-                    - uses: action/checkout@v3
+                    - uses: actions/checkout@v4
                     - name: List Files Before
                       run: ls -a
