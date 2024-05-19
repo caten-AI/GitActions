@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
     Exploring_Working_Dirs:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - name : explore working directory
               run: |
@@ -12,3 +12,14 @@ jobs:
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
                 echo $GITHUB_WORKSPACE 
+    
+    Exploring_Working_Dirs_Windows:
+            runs-on: windows-latest
+            steps:
+                - name : explore working directory for windows
+                  run: |
+                    Get-Location
+                    dir
+                    echo $env:GITHUB_SHA
+                    echo $env:GITHUB_REPOSITORY
+                    echo $env:GITHUB_WORKSPACE 
