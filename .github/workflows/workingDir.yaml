@@ -11,10 +11,16 @@ jobs:
                 ls -lt
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
-                echo $GITHUB_WORKSPACE 
+                echo $GITHUB_WORKSPACE
+            - name: changing working directory
+              working-directory: /home/runner/work/GitActions/
+              run: pwd 
     
     Exploring_Working_Dirs_Windows:
             runs-on: windows-latest
+            # defaults:
+            #     run:
+            #         shell: powershell
             steps:
                 - name : explore working directory for windows
                   run: |
