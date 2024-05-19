@@ -1,0 +1,14 @@
+name: Woring Dirs & Shells
+on: [push]
+
+jobs:
+    Exploring_Working_Dirs:
+        runs-on: windows-latest
+        steps:
+            - name : explore working directory
+              run: |
+                pwd
+                ls -lt
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE 
