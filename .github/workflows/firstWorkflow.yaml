@@ -22,5 +22,5 @@ jobs:
         needs: run-shell-commands
         steps:
             - name: echo some string
-              run: doest
+              run: doestexists 
               
