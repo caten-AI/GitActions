@@ -1,0 +1,9 @@
+name: Sending Commands from Workflows to Runner
+on: [push]
+
+jobs:
+  sending_commands_from_runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting an error message
+        run:  echo "::error::Missing Semi Colon" 
