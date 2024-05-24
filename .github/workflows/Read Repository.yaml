@@ -1,0 +1,25 @@
+name: Read Repository
+on:
+    push:
+        branches:
+        - "main"
+        - "feature/*"  #matches feature/xyz but not feature/zxy/erd
+        - "feature/**" #matches feature/zxy/erd
+        - "!feature/"
+
+        # branches-ignore:
+        #     - "some-branch-to-ignore"
+
+        paths:
+            - "**.js"
+            - "!app.js"
+
+jobs:
+    Read-Respository-with-exclusion-rules:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Simple echo
+              run: echo 'Sample Echo'
+
+
+
